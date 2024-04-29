@@ -1,0 +1,8 @@
+# Error:
+    Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined
+    Found in Navbar.js
+# Solution:
+    Don't use curly braces when importing Nextjs items, particular those that come pre installed such as "Link". This is due to default exports not
+    working well with default auto-imports.
+    Change:
+    import {Link} from "next/link" to -> import Link from "next/link"
