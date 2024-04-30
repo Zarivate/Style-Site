@@ -6,3 +6,18 @@
     working well with default auto-imports.
     Change:
     import {Link} from "next/link" to -> import Link from "next/link"
+
+# Error:
+    Module parse failed: Unexpected character '' (1:0)
+    You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+    (Source code omitted for this binary file)
+
+    Trouble importing a video file, when tried to link it through public folder got gray box that didn't play video.
+    Tried importing through html <Video><source src={require("path/to/video.mp4")} /></Video>, got error.
+    Tried importing from top, still didn't work.
+
+# Solution
+    Had to add webpack that could process video. Altered config file and downloaded file loader
+    https://v4.webpack.js.org/loaders/file-loader/
+    https://webpack.js.org/concepts/#loaders
+    https://stackoverflow.com/questions/36465127/how-to-load-a-local-video-in-react-using-webpack 
