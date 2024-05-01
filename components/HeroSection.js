@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Button } from "./ButtonElement";
 import styled from "styled-components";
 import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
+import Videotest from "../public/video.mp4";
 
 const HeroContainer = styled.div`
-  background: #0c0c0c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,12 +41,11 @@ const HeroBg = styled.div`
   overflow: hidden;
 `;
 
-export const VideoBg = styled.video`
+const VideoBg = styled.video`
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  background: #232a34;
 `;
 
 const HeroContent = styled.div`
@@ -107,7 +106,39 @@ const ArrowRight = styled(MdKeyboardArrowRight)`
 `;
 
 const HeroSection = () => {
-  return <div>HeroSection</div>;
+  const [hover, setHover] = useState(false);
+
+  const onHover = () => {
+    setHover(!hover);
+  };
+
+  return (
+    <HeroContainer id="home">
+      <HeroBg>
+        <VideoBg autoPlay loop muted src={Videotest} type="video/mp4" />
+      </HeroBg>
+      <HeroContent>
+        <HeroH1>Welcome</HeroH1>
+        <HeroP>This is a demonstration website</HeroP>
+        <HeroBtnWrapper>
+          <Button
+            to="signup"
+            onMouseEnter={onHover}
+            onMouseLeave={onHover}
+            primary="true"
+            dark="true"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+          >
+            Get started {hover ? <ArrowForward /> : <ArrowRight />}
+          </Button>
+        </HeroBtnWrapper>
+      </HeroContent>
+    </HeroContainer>
+  );
 };
 
 export default HeroSection;

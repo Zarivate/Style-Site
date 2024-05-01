@@ -151,7 +151,7 @@ const Navbar = ({ toggle }) => {
         <Nav $scrollnav={scrollnav}>
           <NavbarContainer>
             <NavLogo href="/" onClick={toggleHome}>
-              Turtle
+              Professional
             </NavLogo>
             <MobileIcon onClick={toggle}>
               <FaBars />

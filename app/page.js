@@ -13,8 +13,7 @@ export default function Home() {
   return (
     <>
       <Navbar toggle={toggle} />
-      <HeroSection />
-      <VideoBg autoPlay loop muted src={Videotest} type="video/mp4" />
+      {/* <VideoBg autoPlay loop muted src={Videotest} type="video/mp4" /> */}
       <HeroSection />
     </>
   );

@@ -17,7 +17,12 @@
     Tried importing from top, still didn't work.
 
 # Solution
-    Had to add webpack that could process video. Altered config file and downloaded file loader
+    Had to add webpack that could process video. Altered config file and downloaded file loader. 
     https://v4.webpack.js.org/loaders/file-loader/
     https://webpack.js.org/concepts/#loaders
-    https://stackoverflow.com/questions/36465127/how-to-load-a-local-video-in-react-using-webpack 
+    https://stackoverflow.com/questions/36465127/how-to-load-a-local-video-in-react-using-webpack
+
+    Allowed to manually import video in page.js and use it as normal.
+
+    import Videotest from "../public/video.mp4";
+    <VideoBg autoPlay loop muted src={Videotest} type="video/mp4" /> 
