@@ -5,6 +5,7 @@ import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
 import Videotest from "../public/video.mp4";
 
 const HeroContainer = styled.div`
+  background: #0c0c0c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,12 +21,6 @@ const HeroContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(0, 0, 0, 0.6) 100%
-      ),
-      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
     z-index: 2;
   }
 `;
@@ -46,6 +41,7 @@ const VideoBg = styled.video`
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  background: #232a34;
 `;
 
 const HeroContent = styled.div`

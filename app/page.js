@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
-import HeroSection, { VideoBg } from "@/components/HeroSection";
-import Videotest from "../public/video.mp4";
+import HeroSection from "@/components/HeroSection";
+import InfoSections from "@/components/InfoSections";
+import { homeObjOne, homeObjTwo, homeObjThree } from "@/components/InfoData";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,8 +14,10 @@ export default function Home() {
   return (
     <>
       <Navbar toggle={toggle} />
-      {/* <VideoBg autoPlay loop muted src={Videotest} type="video/mp4" /> */}
       <HeroSection />
+      <InfoSections {...homeObjOne} />
+      <InfoSections {...homeObjTwo} />
+      <InfoSections {...homeObjThree} />
     </>
   );
 }
