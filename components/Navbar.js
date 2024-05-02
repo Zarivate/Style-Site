@@ -164,7 +164,6 @@ const Navbar = ({ toggle }) => {
                   duration={500}
                   spy={true}
                   exact="true"
-                  offset={-80}
                 >
                   About
                 </NavLinks>
@@ -176,7 +175,6 @@ const Navbar = ({ toggle }) => {
                   duration={500}
                   spy={true}
                   exact="true"
-                  offset={-80}
                 >
                   Discover
                 </NavLinks>
@@ -188,7 +186,6 @@ const Navbar = ({ toggle }) => {
                   duration={500}
                   spy={true}
                   exact="true"
-                  offset={-80}
                 >
                   Services
                 </NavLinks>
@@ -200,7 +197,6 @@ const Navbar = ({ toggle }) => {
                   duration={500}
                   spy={true}
                   exact="true"
-                  offset={-80}
                 >
                   Sign Up
                 </NavLinks>

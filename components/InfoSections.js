@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "./ButtonElement";
+import Image from "next/image";
 
 const InfoContainer = styled.div`
   color: #fff;
@@ -99,10 +100,11 @@ const ImgWrap = styled.div`
   height: 100%;
 `;
 
-export const Img = styled.img`
+const Img = styled(Image)`
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;
+  height: auto;
 `;
 
 const InfoSections = ({
