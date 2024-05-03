@@ -103,9 +103,13 @@ const ArrowRight = styled(MdKeyboardArrowRight)`
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
+  const [primary, setPrimary] = useState(false);
+  const [dark, setDark] = useState(false);
 
   const onHover = () => {
     setHover(!hover);
+    setPrimary(!primary);
+    setDark(!dark);
   };
 
   return (
@@ -118,11 +122,11 @@ const HeroSection = () => {
         <HeroP>This is a demonstration website</HeroP>
         <HeroBtnWrapper>
           <Button
-            to="signup"
+            to="about"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
-            primary="true"
-            dark="true"
+            primary={primary}
+            dark={dark}
             smooth={true}
             duration={500}
             spy={true}

@@ -8,16 +8,17 @@ export const homeObjOne = {
   lightText: true,
   lightTextDesc: true,
   topLine: "About Thie Site",
-  headline: "Quis minim sunt adipisicing quis.",
+  headline: "A simple showcase",
   description:
-    "Ut aute fugiat dolore amet proident culpa anim reprehenderit aliqua eiusmod proident. Ex amet enim excepteur ut deserunt. Est et id qui voluptate cillum laboris duis laborum proident reprehenderit aliqua ad.",
-  buttonLabel: "Get started",
+    "Made to demonstrate my abilites in building sites from the ground up. NextJS 14 was used alongside styled components to create a fully functional site that's also optimized for mobile users.",
+  buttonLabel: "Continue",
   imgStart: false,
   img: image1,
-  alt: "night1",
-  dark: true,
-  primary: true,
+  alt: "nightMoon",
+  dark: false,
+  primary: false,
   darkText: false,
+  to: "discover",
 };
 
 export const homeObjTwo = {
@@ -36,6 +37,7 @@ export const homeObjTwo = {
   dark: false,
   primary: false,
   darkText: true,
+  to: "services",
 };
 
 export const homeObjThree = {
