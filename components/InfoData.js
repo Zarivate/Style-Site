@@ -15,8 +15,6 @@ export const homeObjOne = {
   imgStart: false,
   img: image1,
   alt: "nightMoon",
-  dark: false,
-  primary: false,
   darkText: false,
   to: "discover",
 };
@@ -34,8 +32,6 @@ export const homeObjTwo = {
   imgStart: true,
   img: image2,
   alt: "blank2",
-  dark: false,
-  primary: false,
   darkText: true,
   to: "services",
 };
@@ -53,7 +49,5 @@ export const homeObjThree = {
   imgStart: false,
   img: image3,
   alt: "blank3",
-  dark: false,
-  primary: false,
   darkText: true,
 };

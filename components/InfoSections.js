@@ -119,8 +119,6 @@ const InfoSections = ({
   buttonLabel,
   img,
   alt,
-  primary,
-  dark,
   to,
 }) => {
   return (
@@ -140,8 +138,8 @@ const InfoSections = ({
                     duration={500}
                     spy={true}
                     exact="true"
-                    primary={primary ? 1 : 0}
-                    dark={dark ? 1 : 0}
+                    primary={lightBg}
+                    dark={lightBg}
                   >
                     {buttonLabel}
                   </ButtonInfoSection>

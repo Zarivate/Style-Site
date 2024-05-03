@@ -24,10 +24,10 @@ export const Button = styled(LinkS)`
 
 export const ButtonInfoSection = styled(LinkS)`
   border-radius: 50px;
-  background: ${({ primary }) => (primary ? `#fff` : "transparent")};
+  background: ${({ lightBg }) => (lightBg ? `#fff` : "black")};
   white-space: nowrap;
   padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
-  color: ${({ dark }) => (dark ? "#transparent" : "#fff")};
+  color: ${({ lightBg }) => (lightBg ? "black" : "#fff")};
   font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
   outline: none;
   border: none;
@@ -39,7 +39,7 @@ export const ButtonInfoSection = styled(LinkS)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${({ primary }) => (primary ? "black" : `#fff`)};
-    color: ${({ dark }) => (dark ? "#fff" : "black")};
+    background: ${({ lightBg }) => (lightBg ? "black" : `#fff`)};
+    color: ${({ lightBg }) => (lightBg ? "#fff" : "black")};
   }
 `;
