@@ -8,10 +8,7 @@ import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 
 const Nav = styled.nav`
-  background: ${({ $scrollnav }) =>
-    $scrollnav
-      ? "#000"
-      : "transparent"}; // This is what changes once scroll is properly implemented
+  background: ${({ $scrollnav }) => ($scrollnav ? "#000" : "transparent")};
   height: 80px;
   margin-top: -80px;
   display: flex;

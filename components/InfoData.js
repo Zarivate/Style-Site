@@ -7,7 +7,7 @@ export const homeObjOne = {
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
-  topLine: "About Us",
+  topLine: "About Thie Site",
   headline: "Quis minim sunt adipisicing quis.",
   description:
     "Ut aute fugiat dolore amet proident culpa anim reprehenderit aliqua eiusmod proident. Ex amet enim excepteur ut deserunt. Est et id qui voluptate cillum laboris duis laborum proident reprehenderit aliqua ad.",
@@ -43,11 +43,10 @@ export const homeObjThree = {
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
-  topLine: "Want to Join?",
-  headline:
-    "Aliquip ex labore dolor eu enim irure commodo reprehenderit qui tempor.",
+  topLine: "Want to Test?",
+  headline: "Functionality demonstration below",
   description:
-    "Tempor fugiat eu deserunt fugiat eiusmod. Minim voluptate exercitation sint Lorem ut nisi commodo sint commodo culpa nisi tempor deserunt ea. Cillum id id ut ea enim do mollit sunt aute dolor cupidatat non enim et. Laboris ea aliquip velit proident laborum et officia dolor ad enim dolore sint. Quis laborum minim qui proident sunt irure excepteur veniam. Excepteur magna esse commodo Lorem do veniam minim qui duis consectetur commodo sunt amet quis.",
+    "If you follow the button below you'll be redirected to a Sign Up/Log In page. You'll receive a confirmation email but will have no ",
   buttonLabel: "Start Now",
   imgStart: false,
   img: image3,
