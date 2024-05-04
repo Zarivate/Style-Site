@@ -44,7 +44,7 @@ export const homeObjThree = {
   topLine: "Want to Test?",
   headline: "Functionality demonstration below",
   description:
-    "If you follow the button below you'll be redirected to a Sign Up/Log In page. You'll receive a confirmation email but will have no ",
+    "If you follow the button below you'll be redirected to a Sign Up/Log In page. You'll receive a confirmation email in your inbox with more details about the site.",
   buttonLabel: "Start Now",
   imgStart: false,
   img: image3,
