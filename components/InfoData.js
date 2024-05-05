@@ -1,5 +1,5 @@
-import image1 from "../public/pexelsOriginal11.jpg";
-import image2 from "../public/pexelsOriginal5.jpg";
+import image1 from "../public/pexels-pixabay-47367.jpg";
+import image2 from "../public/pexels-valter-zhara-164968736-14338901.jpg";
 import image3 from "../public/pexelsOriginal3.jpg";
 
 export const homeObjOne = {
@@ -7,23 +7,23 @@ export const homeObjOne = {
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
-  topLine: "About Thie Site",
+  topLine: "About This Site",
   headline: "A simple showcase",
   description:
     "Made to demonstrate my abilites in building sites from the ground up. NextJS 14 was used alongside styled components to create a fully functional site that's also optimized for mobile users.",
   buttonLabel: "Continue",
   imgStart: false,
   img: image1,
-  alt: "nightMoon",
+  alt: "nightMoon1",
   darkText: false,
   to: "discover",
 };
 
 export const homeObjTwo = {
   id: "discover",
-  lightBg: true,
-  lightText: false,
-  lightTextDesc: false,
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
   topLine: "Discover More",
   headline: "Minim esse ut dolor non fugiat sit eu esse exercitation aliqua.",
   description:
@@ -32,7 +32,7 @@ export const homeObjTwo = {
   imgStart: true,
   img: image2,
   alt: "blank2",
-  darkText: true,
+  darkText: false,
   to: "services",
 };
 

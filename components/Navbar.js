@@ -103,10 +103,10 @@ const NavBtn = styled.nav`
 
 const NavBtnLink = styled(Link)`
   border-radius: 50px;
-  background: #01bf71;
+  background: transparent;
   white-space: nowrap;
   padding: 10px 22px;
-  color: #010606;
+  color: #fff;
   font-size: 16px;
   outline: none;
   border: none;
@@ -117,7 +117,8 @@ const NavBtnLink = styled(Link)`
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
-    color: #010606;
+    color: black;
+    font-weight: 500;
   }
 `;
 
@@ -148,7 +149,7 @@ const Navbar = ({ toggle }) => {
         <Nav $scrollnav={scrollnav}>
           <NavbarContainer>
             <NavLogo href="/" onClick={toggleHome}>
-              Professional
+              Demo
             </NavLogo>
             <MobileIcon onClick={toggle}>
               <FaBars />
