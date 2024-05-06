@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const InfoContainer = styled.div`
   color: #fff;
-  background: linear-gradient(${$background1}, ${$background2});
+  background: #010001;
 
   @media screen and (max-width: 768px) {
     padding: 100px 0;
@@ -58,7 +58,7 @@ const TextWrapper = styled.div`
 `;
 
 const TopLine = styled.p`
-  color: #d9bc8c;
+  color: #7c7c7c;
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
@@ -72,10 +72,7 @@ const Heading = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ $lightText }) =>
-    $lightText
-      ? "#f7f8fa"
-      : "#010606"}; // If it's true return this value if not return the other value
+  color: ${({ $lightText }) => ($lightText ? "#f7f8fa" : "#010606")};
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
@@ -108,7 +105,6 @@ const Img = styled(Image)`
 `;
 
 const InfoSections = ({
-  lightBg,
   id,
   imgStart,
   topLine,
@@ -120,16 +116,10 @@ const InfoSections = ({
   img,
   alt,
   to,
-  background1,
-  background2,
 }) => {
   return (
     <>
-      <InfoContainer
-        $background1={background1}
-        $background2={background2}
-        id={id}
-      >
+      <InfoContainer id={id}>
         <InfoWrapper>
           <InfoRow $imgStart={imgStart}>
             <Column1>
@@ -144,8 +134,6 @@ const InfoSections = ({
                     duration={500}
                     spy={true}
                     exact="true"
-                    primary={lightBg}
-                    dark={lightBg}
                   >
                     {buttonLabel}
                   </ButtonInfoSection>

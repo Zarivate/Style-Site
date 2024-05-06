@@ -110,7 +110,7 @@ const page = () => {
   return (
     <Container>
       <FormWrap>
-        <Icon href="/">Example</Icon>
+        <Icon href="/">Demo</Icon>
         <FormContent>
           <Form action="#">
             <FormH1>Sign in to your account</FormH1>

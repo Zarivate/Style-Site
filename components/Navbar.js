@@ -86,9 +86,9 @@ const NavLinks = styled(LinkS)`
   height: 100%;
   cursor: pointer;
 
-  // Changes things to active as you scroll, workaround to manually hardcode it
+  // As you scroll becomes active, causes highlight to appear underneath navbar once reach corresponding section of the page
   &.active {
-    border-bottom: 3px solid #01bf71; // This is what makes it so everything gets highlighted underneath the navbar when you reach that part of the page
+    border-bottom: 3px solid #7c7c7c;
   }
 `;
 
@@ -116,7 +116,7 @@ const NavBtnLink = styled(Link)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
+    background: #fafafb;
     color: black;
     font-weight: 500;
   }
@@ -162,6 +162,7 @@ const Navbar = ({ toggle }) => {
                   duration={500}
                   spy={true}
                   exact="true"
+                  offset={-80}
                 >
                   About
                 </NavLinks>

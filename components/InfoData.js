@@ -1,55 +1,65 @@
 import image1 from "../public/backgroundless/file2.png";
-import image2 from "../public/pexels-valter-zhara-164968736-14338901.jpg";
-import image3 from "../public/pexels-david-kanigan-239927285-19180676.jpg";
+import image2 from "../public/backgroundless/file3.png";
+import image3 from "../public/backgroundless/file45.png";
+import image4 from "../public/backgroundless/file6.png";
 
 export const homeObjOne = {
   id: "about",
-  lightBg: false,
   lightText: true,
   lightTextDesc: true,
   topLine: "About This Site",
   headline: "A simple showcase",
   description:
-    "Made to demonstrate my abilites in building sites from the ground up. NextJS 14 was used alongside styled components to create a fully functional site that's also optimized for mobile users.",
+    "Made to demonstrate my abilites in building sites from the ground up. NextJS 14 was used alongside styled components to create a fully responsive site.",
   buttonLabel: "Continue",
   imgStart: false,
   img: image1,
-  alt: "nightMoon1",
+  alt: "fullMoon",
   darkText: false,
   to: "discover",
-  background1: "#010001",
-  background2: "#010004",
 };
 
 export const homeObjTwo = {
   id: "discover",
-  lightBg: false,
   lightText: true,
   lightTextDesc: true,
-  topLine: "Discover More",
-  headline: "Minim esse ut dolor non fugiat sit eu esse exercitation aliqua.",
-  description:
-    "Pariatur occaecat qui sint veniam mollit ex duis. Laborum consequat Lorem culpa proident sint. Tempor anim laboris deserunt est sint deserunt cupidatat mollit eiusmod excepteur.",
-  buttonLabel: "Learn More",
+  topLine: "More Info",
+  headline: "All the assets used to build this site are royalty free.",
+  description: "Nisi nisi ipsum elit ut dolor est irure pariatur do esse.",
+  buttonLabel: "Continue",
   imgStart: true,
   img: image2,
-  alt: "blank2",
+  alt: "waningGibbous",
   darkText: false,
   to: "services",
 };
 
 export const homeObjThree = {
   id: "signup",
-  lightBg: true,
   lightText: true,
   lightTextDesc: true,
   topLine: "Want to Test?",
   headline: "Functionality demonstration below",
   description:
-    "If you follow the button below you'll be redirected to a Sign Up/Log In page. You'll receive a confirmation email in your inbox with more details about the site.",
+    "If you follow the button below you'll be redirected to a Sign Up/Log In page. You'll receive a confirmation email in your inbox with links to my other projects. Feel free to check them out if you want.",
   buttonLabel: "Start Now",
   imgStart: false,
   img: image3,
-  alt: "blank3",
+  alt: "lastquarter",
+  darkText: false,
+};
+
+export const homeObjFour = {
+  id: "signup",
+  lightText: true,
+  lightTextDesc: true,
+  topLine: "Want to Test?",
+  headline: "Functionality demonstration below",
+  description:
+    "If you follow the button below you'll be redirected to a Sign Up/Log In page. You'll receive a confirmation email in your inbox with links to my other projects. Feel free to check them out if you want.",
+  buttonLabel: "Start Now",
+  imgStart: true,
+  img: image4,
+  alt: "waningcrescent",
   darkText: false,
 };
