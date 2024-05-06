@@ -1,6 +1,6 @@
-import image1 from "../public/pexels-pixabay-47367.jpg";
+import image1 from "../public/backgroundless/file2.png";
 import image2 from "../public/pexels-valter-zhara-164968736-14338901.jpg";
-import image3 from "../public/pexelsOriginal3.jpg";
+import image3 from "../public/pexels-david-kanigan-239927285-19180676.jpg";
 
 export const homeObjOne = {
   id: "about",
@@ -17,6 +17,8 @@ export const homeObjOne = {
   alt: "nightMoon1",
   darkText: false,
   to: "discover",
+  background1: "#010001",
+  background2: "#010004",
 };
 
 export const homeObjTwo = {
@@ -39,8 +41,8 @@ export const homeObjTwo = {
 export const homeObjThree = {
   id: "signup",
   lightBg: true,
-  lightText: false,
-  lightTextDesc: false,
+  lightText: true,
+  lightTextDesc: true,
   topLine: "Want to Test?",
   headline: "Functionality demonstration below",
   description:
@@ -49,5 +51,5 @@ export const homeObjThree = {
   imgStart: false,
   img: image3,
   alt: "blank3",
-  darkText: true,
+  darkText: false,
 };

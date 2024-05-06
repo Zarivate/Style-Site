@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const InfoContainer = styled.div`
   color: #fff;
-  background: ${({ $lightBg }) => ($lightBg ? "#f9f9f9" : "#010001")};
+  background: linear-gradient(${$background1}, ${$background2});
 
   @media screen and (max-width: 768px) {
     padding: 100px 0;
@@ -58,7 +58,7 @@ const TextWrapper = styled.div`
 `;
 
 const TopLine = styled.p`
-  color: #01bf71;
+  color: #d9bc8c;
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
@@ -120,10 +120,16 @@ const InfoSections = ({
   img,
   alt,
   to,
+  background1,
+  background2,
 }) => {
   return (
     <>
-      <InfoContainer $lightBg={lightBg} id={id}>
+      <InfoContainer
+        $background1={background1}
+        $background2={background2}
+        id={id}
+      >
         <InfoWrapper>
           <InfoRow $imgStart={imgStart}>
             <Column1>
