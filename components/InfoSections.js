@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Button, ButtonInfoSection } from "./ButtonElement";
 import Image from "next/image";
+import backImage from "../public/backgroundless/pexelsstars.jpg";
 
 const InfoContainer = styled.div`
   color: #fff;
@@ -10,6 +11,14 @@ const InfoContainer = styled.div`
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
+`;
+
+const BgImage = styled(Image)`
+  position: fixed;
+  height: 25vh;
+  width: 25vw;
+  overflow: hidden;
+  z-index: -1;
 `;
 
 const InfoWrapper = styled.div`
@@ -74,6 +83,20 @@ const Heading = styled.h1`
   font-weight: 600;
   color: ${({ $lightText }) => ($lightText ? "#f7f8fa" : "#010606")};
 
+  animation: glow 3s ease-in-out infinite alternate;
+
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 5px #020203, 0 0 5px #020203, 0 0 5px #bfbebe,
+        0 0 5px #bfbebe, 0 0 5px #bfbebe, 0 0 15px #fff, 0 0 30px #fff;
+    }
+
+    to {
+      text-shadow: 0 0 5px #020203, 0 0 5px #020203, 0 0 5px #fff,
+        0 0 5px #bfbebe, 0 0 5px #bfbebe, 0 0 15px #fff, 0 0 30 px #fff;
+    }
+  }
+
   @media screen and (max-width: 480px) {
     font-size: 32px;
   }
@@ -104,6 +127,32 @@ const Img = styled(Image)`
   height: auto;
 `;
 
+const HomeA = styled.a`
+  color: #b4b4b5;
+
+  &:hover {
+    color: #e8e8e5;
+  }
+
+  &:visited {
+    color: grey;
+    background-color: transparent;
+  }
+  animation: glow 3s ease-in-out infinite alternate;
+
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 5px #020203, 0 0 5px #010001, 0 0 5px #010001,
+        0 0 5px #fff, 0 0 5px #fff, 0 0 15px #fff, 0 0 30px #fff;
+    }
+
+    to {
+      text-shadow: 0 0 5px #020203, 0 0 5px #010001, 0 0 5px #010001,
+        0 0 5px #fff, 0 0 5px #fff, 0 0 15px #fff, 0 0 30 px #fff;
+    }
+  }
+`;
+
 const InfoSections = ({
   id,
   imgStart,
@@ -112,6 +161,7 @@ const InfoSections = ({
   headline,
   darkText,
   description,
+  description2,
   buttonLabel,
   img,
   alt,
@@ -120,33 +170,16 @@ const InfoSections = ({
   return (
     <>
       <InfoContainer id={id}>
-        <InfoWrapper>
-          <InfoRow $imgStart={imgStart}>
-            <Column1>
-              <TextWrapper>
-                <TopLine>{topLine}</TopLine>
-                <Heading $lightText={lightText}>{headline}</Heading>
-                <Subtitle $darkText={darkText}>{description}</Subtitle>
-                <BtnWrap>
-                  <ButtonInfoSection
-                    to={to}
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                  >
-                    {buttonLabel}
-                  </ButtonInfoSection>
-                </BtnWrap>
-              </TextWrapper>
-            </Column1>
-            <Column2>
-              <ImgWrap>
-                <Img src={img} alt={alt} />
-              </ImgWrap>
-            </Column2>
-          </InfoRow>
-        </InfoWrapper>
+        <Image
+          src={backImage}
+          alt="backgroundim"
+          fill
+          style={{
+            overflow: "hidden",
+            padding: 0,
+            zIndex: 0,
+          }}
+        />
       </InfoContainer>
     </>
   );

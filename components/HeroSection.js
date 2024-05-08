@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "./ButtonElement";
 import styled from "styled-components";
 import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
-import Videotest from "../public/video3.mp4";
+import Videotest from "../public/video4.mp4";
 
 const HeroContainer = styled.div`
   background: #0c0c0c;
@@ -125,8 +125,8 @@ const HeroSection = () => {
             to="about"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
-            primary={primary}
-            dark={dark}
+            $primary={primary}
+            $dark={dark}
             smooth={true}
             duration={500}
             spy={true}

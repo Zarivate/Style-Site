@@ -2,6 +2,7 @@ import image1 from "../public/backgroundless/file2.png";
 import image2 from "../public/backgroundless/file3.png";
 import image3 from "../public/backgroundless/file45.png";
 import image4 from "../public/backgroundless/file6.png";
+import image5 from "../public/backgroundless/pexelsstars.jpg";
 
 export const homeObjOne = {
   id: "about",
@@ -16,45 +17,48 @@ export const homeObjOne = {
   img: image1,
   alt: "fullMoon",
   darkText: false,
-  to: "discover",
+  to: "more",
 };
 
 export const homeObjTwo = {
-  id: "discover",
+  id: "more",
   lightText: true,
   lightTextDesc: true,
-  topLine: "More Info",
-  headline: "All the assets used to build this site are royalty free.",
-  description: "Nisi nisi ipsum elit ut dolor est irure pariatur do esse.",
+  topLine: "Responsive",
+  headline: "This site has been optimized for mobile users as well.",
+  description:
+    "Go ahead and modify the size of this window. A collapsable hamburger menu will replace the navbar once the screen reaches a certain size.",
   buttonLabel: "Continue",
   imgStart: true,
   img: image2,
   alt: "waningGibbous",
   darkText: false,
-  to: "services",
+  to: "details",
 };
 
 export const homeObjThree = {
-  id: "signup",
+  id: "details",
   lightText: true,
   lightTextDesc: true,
-  topLine: "Want to Test?",
-  headline: "Functionality demonstration below",
+  topLine: "Source Code",
+  headline: "Found at my Github",
   description:
-    "If you follow the button below you'll be redirected to a Sign Up/Log In page. You'll receive a confirmation email in your inbox with links to my other projects. Feel free to check them out if you want.",
-  buttonLabel: "Start Now",
+    "Alongside the code for my other projects, the code for this project can be found ",
+  description2: "here",
+  buttonLabel: "Continue",
   imgStart: false,
   img: image3,
   alt: "lastquarter",
   darkText: false,
+  to: "test",
 };
 
 export const homeObjFour = {
-  id: "signup",
+  id: "test",
   lightText: true,
   lightTextDesc: true,
   topLine: "Want to Test?",
-  headline: "Functionality demonstration below",
+  headline: "Functionality demonstration",
   description:
     "If you follow the button below you'll be redirected to a Sign Up/Log In page. You'll receive a confirmation email in your inbox with links to my other projects. Feel free to check them out if you want.",
   buttonLabel: "Start Now",

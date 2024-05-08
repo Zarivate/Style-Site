@@ -9,7 +9,6 @@ import {
   homeObjThree,
   homeObjFour,
 } from "@/components/InfoData";
-import Services from "@/components/Services";
 import Footer from "@/components/Footer";
 import Sidebar from "@/components/Sidebar";
 
@@ -21,7 +20,7 @@ export default function Home() {
   };
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Sidebar $isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection />
       <InfoSections {...homeObjOne} />

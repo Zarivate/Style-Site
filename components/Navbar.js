@@ -169,35 +169,35 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="discover"
+                  to="more"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                 >
-                  Discover
+                  More
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="services"
+                  to="details"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                 >
-                  Services
+                  Details
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="signup"
+                  to="test"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                 >
-                  Sign Up
+                  Test
                 </NavLinks>
               </NavItem>
             </NavMenu>
