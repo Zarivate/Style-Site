@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 
 const FooterContainer = styled.footer`
-  background-color: #010606;
+  background-color: #010001;
 `;
 
 const FooterWrap = styled.div`
@@ -168,10 +168,10 @@ const Footer = () => {
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo href="/" onClick={toggleHome}>
-              Example
+              Demo
             </SocialLogo>
             <WebsiteRights>
-              Example © {new Date().getFullYear()} All rights reserved.
+              Demo © {new Date().getFullYear()} All rights reserved.
             </WebsiteRights>
             <SocialIcons>
               <CustomA href="/" target="_blank" aria-label="Facebook">

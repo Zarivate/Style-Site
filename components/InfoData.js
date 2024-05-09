@@ -1,8 +1,7 @@
 import image1 from "../public/backgroundless/file2.png";
 import image2 from "../public/backgroundless/file3.png";
 import image3 from "../public/backgroundless/file45.png";
-import image4 from "../public/backgroundless/file6.png";
-import image5 from "../public/backgroundless/pexelsstars.jpg";
+import image4 from "/public/backgroundless/file6.png";
 
 export const homeObjOne = {
   id: "about",
@@ -60,10 +59,11 @@ export const homeObjFour = {
   topLine: "Want to Test?",
   headline: "Functionality demonstration",
   description:
-    "If you follow the button below you'll be redirected to a Sign Up/Log In page. You'll receive a confirmation email in your inbox with links to my other projects. Feel free to check them out if you want.",
+    "If you follow the button below you'll be redirected to a Sign Up/Log In page. Once signe up, you'll receive a confirmation email in your inbox with details about how the session works and links to more advanced sites I've made.",
   buttonLabel: "Start Now",
   imgStart: true,
   img: image4,
   alt: "waningcrescent",
   darkText: false,
+  hrefTo: "/signin",
 };

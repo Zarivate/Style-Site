@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Button, ButtonInfoSection } from "./ButtonElement";
+import { ButtonInfoSection } from "./ButtonElement";
+import { NavBtnLink } from "./Navbar";
 import Image from "next/image";
-import backImage from "../public/backgroundless/pexelsstars.jpg";
 
 const InfoContainer = styled.div`
   color: #fff;
@@ -11,14 +11,6 @@ const InfoContainer = styled.div`
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
-`;
-
-const BgImage = styled(Image)`
-  position: fixed;
-  height: 25vh;
-  width: 25vw;
-  overflow: hidden;
-  z-index: -1;
 `;
 
 const InfoWrapper = styled.div`
@@ -52,6 +44,7 @@ const Column1 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col1;
+  background-image: url(${({ background }) => background});
 `;
 
 const Column2 = styled.div`
@@ -166,20 +159,54 @@ const InfoSections = ({
   img,
   alt,
   to,
+  hrefTo,
 }) => {
   return (
     <>
       <InfoContainer id={id}>
-        <Image
-          src={backImage}
-          alt="backgroundim"
-          fill
-          style={{
-            overflow: "hidden",
-            padding: 0,
-            zIndex: 0,
-          }}
-        />
+        <InfoWrapper>
+          <InfoRow $imgStart={imgStart}>
+            <Column1>
+              <TextWrapper>
+                <TopLine>{topLine}</TopLine>
+                <Heading $lightText={lightText}>{headline}</Heading>
+                <Subtitle $darkText={darkText}>
+                  {description}
+                  {description2 ? (
+                    <HomeA
+                      href="https://github.com/Zarivate/Style-Site"
+                      target="_blank"
+                    >
+                      {description2 + "."}
+                    </HomeA>
+                  ) : (
+                    ""
+                  )}
+                </Subtitle>
+                <BtnWrap>
+                  {hrefTo ? (
+                    <NavBtnLink href={hrefTo}>Test It</NavBtnLink>
+                  ) : (
+                    <ButtonInfoSection
+                      to={to}
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                    >
+                      {buttonLabel}
+                    </ButtonInfoSection>
+                  )}
+                </BtnWrap>
+              </TextWrapper>
+            </Column1>
+            <Column2>
+              <ImgWrap>
+                <Img src={img} alt={alt} />
+              </ImgWrap>
+            </Column2>
+          </InfoRow>
+        </InfoWrapper>
       </InfoContainer>
     </>
   );

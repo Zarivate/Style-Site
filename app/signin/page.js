@@ -2,9 +2,17 @@
 import styled from "styled-components";
 import React from "react";
 import Link from "next/link";
+import moongBg from "/public/backgroundless/moonphases.jpg";
+
+const BgSpace = styled.div`
+  width: 100%;
+  height: 100%;
+  background-image: url(${moongBg.src});
+  background-size: 100% 100%;
+`;
 
 const Container = styled.div`
-  min-height: 692px;
+  min-height: 500px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -12,7 +20,6 @@ const Container = styled.div`
   top: 0;
   z-index: 0;
   overflow: hidden;
-  background: linear-gradient(#010100, #fff);
 `;
 
 const FormWrap = styled.div`
@@ -52,16 +59,30 @@ const FormContent = styled.div`
 `;
 
 const Form = styled.form`
-  background: inherit;
+  background: #010100;
   max-width: 400px;
   height: auto;
   width: 100%;
   z-index: 1;
   display: grid;
   margin: 0 auto;
-  padding: 80px 32px;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  padding: 50px 32px;
+  border-radius: 25px;
+
+  animation: glow 3s ease-in-out infinite alternate;
+
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 5px #020203, 0 0 5px #020203, 0 0 5px #bfbebe,
+        0 0 5px #bfbebe, 0 0 5px #bfbebe, 0 0 15px #fff, 0 0 30px #fff;
+      box-shadow: 1px 2px 22px rgb(238, 238, 228);
+    }
+
+    to {
+      text-shadow: 0 0 5px #020203, 0 0 5px #020203, 0 0 5px #fff,
+        0 0 5px #bfbebe, 0 0 5px #bfbebe, 0 0 15px #fff, 0 0 30 px #fff;
+    }
+  }
 
   @media screen and (max-width: 400px) {
     padding: 32px 32px;
@@ -90,13 +111,19 @@ const FormInput = styled.input`
 `;
 
 const FormButton = styled.button`
-  background: #010100;
-  padding: 16px 0;
+  background-color: #fff;
+  color: #010100;
+  padding: 10px 0;
   border: none;
-  border-radius: 4px;
-  color: #fff;
+  border-radius: 20px;
   font-size: 20px;
   cursor: pointer;
+  flex-basis: 48%;
+
+  &:hover {
+    background-color: #010100;
+    color: #fff;
+  }
 `;
 
 const Text = styled.span`
@@ -106,24 +133,52 @@ const Text = styled.span`
   font-size: 14px;
 `;
 
+const BtnField = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const BtnFieldButton = styled.button`
+  flex-basis: 48%;
+  background: #fff;
+  color: black;
+  height: 40px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background 1s;
+`;
+
 const page = () => {
   return (
-    <Container>
-      <FormWrap>
-        <Icon href="/">Demo</Icon>
-        <FormContent>
-          <Form action="#">
-            <FormH1>Sign in to your account</FormH1>
-            <FormLabel htmlFor="for">Email</FormLabel>
-            <FormInput type="email" required />
-            <FormLabel htmlFor="for">Password</FormLabel>
-            <FormInput type="password" required />
-            <FormButton type="submit">Continue</FormButton>
-            <Text>Forgot password? Good</Text>
-          </Form>
-        </FormContent>
-      </FormWrap>
-    </Container>
+    <>
+      <Container>
+        <BgSpace $moonBg={moongBg}>
+          <FormWrap>
+            <Icon href="/">Demo</Icon>
+            <FormContent>
+              <Form action="#">
+                <FormH1>Sign In</FormH1>
+                <FormLabel htmlFor="for">Email</FormLabel>
+                <FormInput type="email" required />
+                <FormLabel htmlFor="for">Password</FormLabel>
+                <FormInput type="password" required />
+                <BtnField>
+                  <FormButton type="submit">Sign In</FormButton>
+                  <FormButton type="submit">Sign Up</FormButton>
+                </BtnField>
+
+                <Text>
+                  Forgot password? <a href="/">Reset Here</a>
+                </Text>
+              </Form>
+            </FormContent>
+          </FormWrap>
+        </BgSpace>
+      </Container>
+    </>
   );
 };
 
