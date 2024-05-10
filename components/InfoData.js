@@ -59,7 +59,7 @@ export const homeObjFour = {
   topLine: "Want to Test?",
   headline: "Functionality demonstration",
   description:
-    "If you follow the button below you'll be redirected to a Sign Up/Log In page. Once signe up, you'll receive a confirmation email in your inbox with details about how the session works and links to more advanced sites I've made.",
+    "If you follow the button below you'll be redirected to a simple Log In page. Once logged in, you'll be redirected to a hidden page with details about how the session works and links to more advanced sites I've made.",
   buttonLabel: "Start Now",
   imgStart: true,
   img: image4,
