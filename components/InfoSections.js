@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const InfoContainer = styled.div`
   color: #fff;
-  background: #010001;
+  background: ${({ $lightBg }) => ($lightBg ? "#fff" : "#010001")};
 
   @media screen and (max-width: 768px) {
     padding: 100px 0;
@@ -105,7 +105,7 @@ const Subtitle = styled.p`
 
 const BtnWrap = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 `;
 
 const ImgWrap = styled.div`
@@ -148,6 +148,7 @@ const HomeA = styled.a`
 
 const InfoSections = ({
   id,
+  lightBg,
   imgStart,
   topLine,
   lightText,
@@ -159,11 +160,13 @@ const InfoSections = ({
   img,
   alt,
   to,
+  dash,
+  destination,
   hrefTo,
 }) => {
   return (
     <>
-      <InfoContainer id={id}>
+      <InfoContainer id={id} $lightBg={lightBg}>
         <InfoWrapper>
           <InfoRow $imgStart={imgStart}>
             <Column1>
@@ -185,7 +188,20 @@ const InfoSections = ({
                 </Subtitle>
                 <BtnWrap>
                   {hrefTo ? (
-                    <NavBtnLink href={hrefTo}>Test It</NavBtnLink>
+                    <>
+                      <NavBtnLink href={hrefTo}>Test It</NavBtnLink>
+                    </>
+                  ) : dash ? (
+                    // Edit this section to link to fullstack site and then have second button as logout
+                    <ButtonInfoSection
+                      to={to}
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                    >
+                      {buttonLabel}
+                    </ButtonInfoSection>
                   ) : (
                     <ButtonInfoSection
                       to={to}

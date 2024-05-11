@@ -2,6 +2,8 @@ import image1 from "../public/backgroundless/file2.png";
 import image2 from "../public/backgroundless/file3.png";
 import image3 from "../public/backgroundless/file45.png";
 import image4 from "/public/backgroundless/file6.png";
+import image5 from "/public/backgroundless/file6.png";
+import image6 from "/public/backgroundless/file62.png";
 
 export const homeObjOne = {
   id: "about",
@@ -66,4 +68,37 @@ export const homeObjFour = {
   alt: "waningcrescent",
   darkText: false,
   hrefTo: "/signin",
+};
+
+export const dashObjOne = {
+  id: "first",
+  lightText: true,
+  lightTextDesc: true,
+  headline: "Welcome",
+  description:
+    "This page is only accessible after successfully signing up. The way it's done is by creating a cookie that's used to see whether the user is currently in a session or not. It's rather unsecure but for the purpose of this site it's fine. The logout button in the next section will log you out by destroying the cookie and redirecting you to the main page.",
+  buttonLabel: "Continue",
+  imgStart: false,
+  img: image5,
+  alt: "crescent1",
+  darkText: false,
+  to: "second",
+};
+
+export const dashObjTwo = {
+  id: "second",
+  lightText: true,
+  lightTextDesc: true,
+  headline: "A More Advanced",
+  description:
+    "Site is where you'll be redirected to if you follow the button below. The site will be a full stack Next JS application with a database and proper user authentication. ",
+  buttonLabel: "Go to fullstack site",
+  buttonLabe2: "Log out",
+  imgStart: true,
+  img: image6,
+  alt: "crescent2",
+  darkText: false,
+  dash: true,
+  // TODO: Change this so it connects to a more complete site
+  destination: "www.Github.com/Zarivate",
 };

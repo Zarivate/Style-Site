@@ -1,14 +1,15 @@
 "use client";
 import styled from "styled-components";
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import moongBg from "/public/backgroundless/moonphases.jpg";
 import { createAccount } from "../actions/signUp";
 
-const BgSpace = styled.div`
+export const BgSpace = styled.div`
   width: 100%;
   height: 100%;
-  background-image: url(${moongBg.src});
+  // This was a pain to figure out
+  background-image: ${(props) => `url(${props.$bg.src})`};
   background-size: 100% 100%;
 `;
 
@@ -128,7 +129,7 @@ const page = () => {
   return (
     <>
       <Container>
-        <BgSpace $moonBg={moongBg}>
+        <BgSpace $bg={moongBg}>
           <FormWrap>
             <Icon href="/">Demo</Icon>
             <FormContent>
