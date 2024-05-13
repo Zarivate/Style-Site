@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { ButtonInfoSection } from "./ButtonElement";
 import { NavBtnLink } from "./Navbar";
 import Image from "next/image";
+import { logoutBtn } from "@/app/actions/signUp";
 
 const InfoContainer = styled.div`
   color: #fff;
@@ -105,7 +106,7 @@ const Subtitle = styled.p`
 
 const BtnWrap = styled.div`
   display: flex;
-  justify-content: space-between;
+  padding: 10px;
 `;
 
 const ImgWrap = styled.div`
@@ -144,6 +145,33 @@ const HomeA = styled.a`
         0 0 5px #fff, 0 0 5px #fff, 0 0 15px #fff, 0 0 30 px #fff;
     }
   }
+`;
+
+const LogoutBtn = styled.button`
+  border-radius: 50px;
+  background: #010001;
+  white-space: nowrap;
+  padding: 14px 48px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010001;
+  }
+`;
+
+const Form = styled.form`
+  display: flex;
+  margin-left: 15px;
 `;
 
 const InfoSections = ({
@@ -193,15 +221,23 @@ const InfoSections = ({
                     </>
                   ) : dash ? (
                     // Edit this section to link to fullstack site and then have second button as logout
-                    <ButtonInfoSection
-                      to={to}
-                      smooth={true}
-                      duration={500}
-                      spy={true}
-                      exact="true"
-                    >
-                      {buttonLabel}
-                    </ButtonInfoSection>
+                    <>
+                      <ButtonInfoSection
+                        // Change this so instead of scrolling, links to other site with href
+                        to={to}
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact="true"
+                      >
+                        {buttonLabel}
+                      </ButtonInfoSection>
+                      <Form action={logoutBtn}>
+                        {/* Style this button in the vain of the others, regular button won't work because it's a link not a button so can't
+                        do type="submit" on a link */}
+                        <LogoutBtn type="submit">{dash}</LogoutBtn>
+                      </Form>
+                    </>
                   ) : (
                     <ButtonInfoSection
                       to={to}
@@ -218,7 +254,7 @@ const InfoSections = ({
             </Column1>
             <Column2>
               <ImgWrap>
-                <Img src={img} alt={alt} />
+                <Img src={img} alt={alt} priority={true} />
               </ImgWrap>
             </Column2>
           </InfoRow>

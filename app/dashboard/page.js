@@ -39,9 +39,6 @@ const Dashboard = () => {
     return (
       <>
         <InfoSections {...dashObjOne} />
-        <form action={logoutBtn}>
-          <button type="submit">logout</button>
-        </form>
         <InfoSections {...dashObjTwo} />
       </>
     );

@@ -98,7 +98,7 @@ export const dashObjTwo = {
   img: image6,
   alt: "crescent2",
   darkText: false,
-  dash: true,
+  dash: "Logout",
   // TODO: Change this so it connects to a more complete site
   destination: "www.Github.com/Zarivate",
 };
