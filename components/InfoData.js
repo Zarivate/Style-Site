@@ -100,5 +100,5 @@ export const dashObjTwo = {
   darkText: false,
   dash: "Logout",
   // TODO: Change this so it connects to a more complete site
-  destination: "www.Github.com/Zarivate",
+  destination: "https://Github.com/Zarivate",
 };

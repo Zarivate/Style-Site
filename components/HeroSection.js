@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "./ButtonElement";
+import { ButtonInfoSection } from "./ButtonElement";
 import styled from "styled-components";
 import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
 import Videotest from "../public/video3.mp4";
@@ -104,7 +104,7 @@ const ArrowRight = styled(MdKeyboardArrowRight)`
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
   const [primary, setPrimary] = useState(false);
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
 
   const onHover = () => {
     setHover(!hover);
@@ -121,7 +121,7 @@ const HeroSection = () => {
         <HeroH1>Welcome</HeroH1>
         <HeroP>This is a demonstration website</HeroP>
         <HeroBtnWrapper>
-          <Button
+          <ButtonInfoSection
             to="about"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
@@ -134,7 +134,7 @@ const HeroSection = () => {
             offset={-80}
           >
             Learn More {hover ? <ArrowForward /> : <ArrowRight />}
-          </Button>
+          </ButtonInfoSection>
         </HeroBtnWrapper>
       </HeroContent>
     </HeroContainer>

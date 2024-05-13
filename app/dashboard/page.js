@@ -3,7 +3,6 @@ import Cookies from "js-cookie";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import { logoutBtn } from "../actions/signUp";
 import { BgSpace } from "../signin/page";
 import errorBg from "/public/backgroundless/pexelserror.jpg";
 import InfoSections from "@/components/InfoSections";

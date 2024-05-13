@@ -122,7 +122,7 @@ const Img = styled(Image)`
 `;
 
 const HomeA = styled.a`
-  color: #b4b4b5;
+  color: #fff;
 
   &:hover {
     color: #e8e8e5;
@@ -144,6 +144,29 @@ const HomeA = styled.a`
       text-shadow: 0 0 5px #020203, 0 0 5px #010001, 0 0 5px #010001,
         0 0 5px #fff, 0 0 5px #fff, 0 0 15px #fff, 0 0 30 px #fff;
     }
+  }
+`;
+
+const FullStackBtn = styled(HomeA)`
+  text-decoration: none;
+  border-radius: 50px;
+  background: ${({ lightBg }) => (lightBg ? `#fff` : "black")};
+  white-space: nowrap;
+  padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
+  color: ${({ lightBg }) => (lightBg ? "black" : "#fff")};
+  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: ${({ lightBg }) => (lightBg ? "black" : `#fff`)};
+    color: ${({ lightBg }) => (lightBg ? "#fff" : "black")};
   }
 `;
 
@@ -222,8 +245,16 @@ const InfoSections = ({
                   ) : dash ? (
                     // Edit this section to link to fullstack site and then have second button as logout
                     <>
+                      <FullStackBtn href={destination} target="_blank">
+                        {buttonLabel}
+                      </FullStackBtn>
+                      <Form action={logoutBtn}>
+                        <LogoutBtn type="submit">{dash}</LogoutBtn>
+                      </Form>
+                    </>
+                  ) : (
+                    <>
                       <ButtonInfoSection
-                        // Change this so instead of scrolling, links to other site with href
                         to={to}
                         smooth={true}
                         duration={500}
@@ -232,22 +263,7 @@ const InfoSections = ({
                       >
                         {buttonLabel}
                       </ButtonInfoSection>
-                      <Form action={logoutBtn}>
-                        {/* Style this button in the vain of the others, regular button won't work because it's a link not a button so can't
-                        do type="submit" on a link */}
-                        <LogoutBtn type="submit">{dash}</LogoutBtn>
-                      </Form>
                     </>
-                  ) : (
-                    <ButtonInfoSection
-                      to={to}
-                      smooth={true}
-                      duration={500}
-                      spy={true}
-                      exact="true"
-                    >
-                      {buttonLabel}
-                    </ButtonInfoSection>
                   )}
                 </BtnWrap>
               </TextWrapper>
