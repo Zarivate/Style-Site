@@ -3,10 +3,11 @@ import Cookies from "js-cookie";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import { BgSpace } from "../signin/page";
+import { OutterWrap } from "../signin/page";
 import errorBg from "/public/backgroundless/pexelserror.jpg";
 import InfoSections from "@/components/InfoSections";
 import { dashObjOne, dashObjTwo } from "@/components/InfoData";
+import Image from "next/image";
 
 const Container = styled.div`
   min-height: 500px;
@@ -44,12 +45,13 @@ const Dashboard = () => {
   }
   return (
     <>
-      <Container>
-        <BgSpace $bg={errorBg}>
+      <OutterWrap>
+        <Image src={errorBg} alt="error Image" fill />
+        <Container>
           <h1>You need to create an account first!</h1>
           <Link href="/signin">Create your account</Link>
-        </BgSpace>
-      </Container>
+        </Container>
+      </OutterWrap>
     </>
   );
 };

@@ -147,51 +147,6 @@ const HomeA = styled.a`
   }
 `;
 
-const FullStackBtn = styled(HomeA)`
-  text-decoration: none;
-  border-radius: 50px;
-  background: ${({ lightBg }) => (lightBg ? `#fff` : "black")};
-  white-space: nowrap;
-  padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
-  color: ${({ lightBg }) => (lightBg ? "black" : "#fff")};
-  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
-  outline: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: ${({ lightBg }) => (lightBg ? "black" : `#fff`)};
-    color: ${({ lightBg }) => (lightBg ? "#fff" : "black")};
-  }
-`;
-
-const LogoutBtn = styled.button`
-  border-radius: 50px;
-  background: #010001;
-  white-space: nowrap;
-  padding: 14px 48px;
-  color: #fff;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010001;
-  }
-`;
-
 const Form = styled.form`
   display: flex;
   margin-left: 15px;
@@ -243,13 +198,19 @@ const InfoSections = ({
                       <NavBtnLink href={hrefTo}>Test It</NavBtnLink>
                     </>
                   ) : dash ? (
-                    // Edit this section to link to fullstack site and then have second button as logout
+                    // Edit this section to link to fullstack site
                     <>
-                      <FullStackBtn href={destination} target="_blank">
+                      <ButtonInfoSection
+                        as="a"
+                        href={destination}
+                        target="_blank"
+                      >
                         {buttonLabel}
-                      </FullStackBtn>
+                      </ButtonInfoSection>
                       <Form action={logoutBtn}>
-                        <LogoutBtn type="submit">{dash}</LogoutBtn>
+                        <ButtonInfoSection as="button" type="submit">
+                          {dash}
+                        </ButtonInfoSection>
                       </Form>
                     </>
                   ) : (

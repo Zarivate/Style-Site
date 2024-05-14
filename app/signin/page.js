@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import moongBg from "/public/backgroundless/moonphases.jpg";
 import { createAccount } from "../actions/signUp";
 
@@ -11,6 +12,11 @@ export const BgSpace = styled.div`
   // This was a pain to figure out
   background-image: ${(props) => `url(${props.$bg.src})`};
   background-size: 100% 100%;
+`;
+
+export const OutterWrap = styled.div`
+  position: relative;
+  height: 100vh;
 `;
 
 const Container = styled.div`
@@ -127,45 +133,44 @@ const FormButton = styled.button`
 
 const page = () => {
   return (
-    <>
+    <OutterWrap>
+      <Image src={moongBg} alt="testimg" fill />
       <Container>
-        <BgSpace $bg={moongBg}>
-          <FormWrap>
-            <Icon href="/">Demo</Icon>
-            <FormContent>
-              <Form action={createAccount}>
-                <FormH1>Sign Up</FormH1>
-                <FormLabel htmlFor="username">Username</FormLabel>
-                <FormInput
-                  type="text"
-                  id="username"
-                  name="username"
-                  placeholder="Username"
-                  required
-                />
-                <FormLabel htmlFor="email">Email</FormLabel>
-                <FormInput
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Example@mail.com"
-                  required
-                />
-                <FormLabel htmlFor="password">Password</FormLabel>
-                <FormInput
-                  type="password"
-                  id="password"
-                  name="password"
-                  placeholder="Password"
-                  required
-                />
-                <FormButton type="submit">Sign Up</FormButton>
-              </Form>
-            </FormContent>
-          </FormWrap>
-        </BgSpace>
+        <FormWrap>
+          <Icon href="/">Demo</Icon>
+          <FormContent>
+            <Form action={createAccount}>
+              <FormH1>Sign Up</FormH1>
+              <FormLabel htmlFor="username">Username</FormLabel>
+              <FormInput
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Username"
+                required
+              />
+              <FormLabel htmlFor="email">Email</FormLabel>
+              <FormInput
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Example@mail.com"
+                required
+              />
+              <FormLabel htmlFor="password">Password</FormLabel>
+              <FormInput
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+              <FormButton type="submit">Sign Up</FormButton>
+            </Form>
+          </FormContent>
+        </FormWrap>
       </Container>
-    </>
+    </OutterWrap>
   );
 };
 
