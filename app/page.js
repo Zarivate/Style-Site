@@ -1,16 +1,16 @@
 "use client";
 import React, { useState } from "react";
-import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import InfoSections from "@/components/InfoSections";
+import Navbar from "@/components/navbar";
+import HeroSection from "@/components/heroSection";
+import InfoSections from "@/components/infoSections";
 import {
   homeObjOne,
   homeObjTwo,
   homeObjThree,
   homeObjFour,
-} from "@/components/InfoData";
-import Footer from "@/components/Footer";
-import Sidebar from "@/components/Sidebar";
+} from "@/components/infoData";
+import Footer from "@/components/footer";
+import Sidebar from "@/components/sidebar";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);

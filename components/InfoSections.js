@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { ButtonInfoSection } from "./ButtonElement";
-import { NavBtnLink } from "./Navbar";
+import { ButtonInfoSection } from "./buttonElement";
+import { NavBtnLink } from "./navbar";
 import Image from "next/image";
 import { logoutBtn } from "@/app/actions/signUp";
 
@@ -75,21 +75,9 @@ const Heading = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ $lightText }) => ($lightText ? "#f7f8fa" : "#010606")};
-
-  animation: glow 3s ease-in-out infinite alternate;
-
-  @-webkit-keyframes glow {
-    from {
-      text-shadow: 0 0 5px #020203, 0 0 5px #020203, 0 0 5px #bfbebe,
-        0 0 5px #bfbebe, 0 0 5px #bfbebe, 0 0 15px #fff, 0 0 30px #fff;
-    }
-
-    to {
-      text-shadow: 0 0 5px #020203, 0 0 5px #020203, 0 0 5px #fff,
-        0 0 5px #bfbebe, 0 0 5px #bfbebe, 0 0 15px #fff, 0 0 30 px #fff;
-    }
-  }
+  color: #f7f8fa;
+  background: #010001;
+  text-shadow: 0 0 4px #fff, 0 0 4px #494949;
 
   @media screen and (max-width: 480px) {
     font-size: 32px;

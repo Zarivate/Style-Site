@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ButtonInfoSection } from "./ButtonElement";
+import { ButtonInfoSection } from "./buttonElement";
 import styled from "styled-components";
 import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
 import Videotest from "../public/video3.mp4";

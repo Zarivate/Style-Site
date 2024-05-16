@@ -26,3 +26,32 @@
 
     import Videotest from "../public/video.mp4";
     <VideoBg autoPlay loop muted src={Videotest} type="video/mp4" /> 
+
+# Error:
+    Background image would not 
+
+
+# Solution:
+    Had to add the ".src" to the end of the passed in prop in order to be correctly identified
+    Proper component turned out to be like this
+
+    const BgSpace = styled.div`
+    width: 100%;
+    height: 100%;
+    background-image: ${(props) => `url(${props.$bg.src})`};
+    background-size: 100% 100%;
+`;
+
+    All of this was redundant however as NextJS's Image component has features that make it simple to pass
+    In background images and configure optimization.  
+
+
+# Error:
+    Failed to load resource: the server responded with a status of 404 favicon
+
+# Solution:
+    Add 
+    <link rel="icon" href="data:;base64,iVBORw0KGgo="></link>
+    To layout.js
+    https://stackoverflow.com/questions/39149846/why-am-i-seeing-a-404-not-found-error-failed-to-load-favicon-ico-when-not-usin 
+    Happens because even when not using a favicon, browsers look for it in the HTML. 

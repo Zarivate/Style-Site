@@ -3,11 +3,15 @@ import { Link as LinkS } from "react-scroll";
 
 export const ButtonInfoSection = styled(LinkS)`
   border-radius: 50px;
-  background: ${({ lightBg }) => (lightBg ? `#fff` : "inherit")};
+  background: ${({ $err }) => ($err ? `black` : "inherit")};
   white-space: nowrap;
   padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
   color: ${({ lightBg }) => (lightBg ? "black" : "#fff")};
   font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  width: ${({ $err }) => ($err ? "fit-content" : "")};
+  margin: ${({ $err }) => ($err ? "auto" : "")};
+  text-decoration: ${({ $err }) => ($err ? "none" : "")};
+  margin-top: ${({ $err }) => ($err ? "10px" : "")};
   outline: none;
   border: none;
   cursor: pointer;

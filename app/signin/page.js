@@ -6,20 +6,13 @@ import Image from "next/image";
 import moongBg from "/public/backgroundless/moonphases.jpg";
 import { createAccount } from "../actions/signUp";
 
-export const BgSpace = styled.div`
-  width: 100%;
-  height: 100%;
-  // This was a pain to figure out
-  background-image: ${(props) => `url(${props.$bg.src})`};
-  background-size: 100% 100%;
-`;
-
 export const OutterWrap = styled.div`
   position: relative;
   height: 100vh;
+  width: 100vw;
 `;
 
-const Container = styled.div`
+export const Container = styled.div`
   min-height: 500px;
   position: fixed;
   bottom: 0;

@@ -3,22 +3,12 @@ import Cookies from "js-cookie";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import { OutterWrap } from "../signin/page";
+import { OutterWrap, Container } from "../signin/page";
 import errorBg from "/public/backgroundless/pexelserror.jpg";
-import InfoSections from "@/components/InfoSections";
-import { dashObjOne, dashObjTwo } from "@/components/InfoData";
+import InfoSections from "@/components/infoSections";
+import { dashObjOne, dashObjTwo } from "@/components/infoData";
 import Image from "next/image";
-
-const Container = styled.div`
-  min-height: 500px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 0;
-  overflow: hidden;
-`;
+import { ButtonInfoSection } from "@/components/buttonElement";
 
 const getToken = () => {
   const token = Cookies.get("token");
@@ -48,8 +38,12 @@ const Dashboard = () => {
       <OutterWrap>
         <Image src={errorBg} alt="error Image" fill />
         <Container>
-          <h1>You need to create an account first!</h1>
-          <Link href="/signin">Create your account</Link>
+          <TopText>An account is needed to access this resource!</TopText>
+          <BtnTextWrapper>
+            <ButtonInfoSection as={Link} href="/signin" $err>
+              Create account
+            </ButtonInfoSection>
+          </BtnTextWrapper>
         </Container>
       </OutterWrap>
     </>
@@ -57,3 +51,14 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+const BtnTextWrapper = styled.h1`
+  width: 200px;
+  margin: auto;
+`;
+
+const TopText = styled.h1`
+  margin: auto;
+  margin-top: 5%;
+  text-align: center;
+`;
