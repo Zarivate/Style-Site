@@ -7,8 +7,6 @@ import image6 from "/public/backgroundless/file62.png";
 
 export const homeObjOne = {
   id: "about",
-  lightText: true,
-  lightTextDesc: true,
   topLine: "About This Site",
   headline: "A simple showcase",
   description:
@@ -17,14 +15,11 @@ export const homeObjOne = {
   imgStart: false,
   img: image1,
   alt: "fullMoon",
-  darkText: false,
   to: "more",
 };
 
 export const homeObjTwo = {
   id: "more",
-  lightText: true,
-  lightTextDesc: true,
   topLine: "Responsive",
   headline: "This site has been optimized for mobile users as well.",
   description:
@@ -33,14 +28,11 @@ export const homeObjTwo = {
   imgStart: true,
   img: image2,
   alt: "waningGibbous",
-  darkText: false,
   to: "details",
 };
 
 export const homeObjThree = {
   id: "details",
-  lightText: true,
-  lightTextDesc: true,
   topLine: "Source Code",
   headline: "Found at my Github",
   description:
@@ -50,14 +42,11 @@ export const homeObjThree = {
   imgStart: false,
   img: image3,
   alt: "lastquarter",
-  darkText: false,
   to: "test",
 };
 
 export const homeObjFour = {
   id: "test",
-  lightText: true,
-  lightTextDesc: true,
   topLine: "Want to Test?",
   headline: "Functionality demonstration",
   description:
@@ -66,14 +55,11 @@ export const homeObjFour = {
   imgStart: true,
   img: image4,
   alt: "waningcrescent",
-  darkText: false,
   hrefTo: "/signin",
 };
 
 export const dashObjOne = {
   id: "first",
-  lightText: true,
-  lightTextDesc: true,
   headline: "Welcome",
   description:
     "This page is only accessible after successfully signing up. The way it's done is by creating a cookie that's used to see whether the user is currently in a session or not. It's rather unsecure but for the purpose of this site it's fine. The logout button in the next section will log you out by destroying the cookie and redirecting you to the main page.",
@@ -81,14 +67,11 @@ export const dashObjOne = {
   imgStart: false,
   img: image5,
   alt: "crescent1",
-  darkText: false,
   to: "second",
 };
 
 export const dashObjTwo = {
   id: "second",
-  lightText: true,
-  lightTextDesc: true,
   headline: "A More Advanced",
   description:
     "Site is where you'll be redirected to if you follow the button below. The site will be a full stack Next JS application with a database and proper user authentication. ",
@@ -97,7 +80,6 @@ export const dashObjTwo = {
   imgStart: true,
   img: image6,
   alt: "crescent2",
-  darkText: false,
   dash: "Logout",
   // TODO: Change this so it connects to a more complete site
   destination: "https://Github.com/Zarivate",

@@ -6,7 +6,7 @@ export const ButtonInfoSection = styled(LinkS)`
   background: ${({ $err }) => ($err ? `black` : "inherit")};
   white-space: nowrap;
   padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
-  color: ${({ lightBg }) => (lightBg ? "black" : "#fff")};
+  color: #fff;
   font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
   width: ${({ $err }) => ($err ? "fit-content" : "")};
   margin: ${({ $err }) => ($err ? "auto" : "")};
@@ -22,7 +22,7 @@ export const ButtonInfoSection = styled(LinkS)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${({ lightBg }) => (lightBg ? "black" : `#fff`)};
-    color: ${({ lightBg }) => (lightBg ? "#fff" : "black")};
+    background: #fff;
+    color: black;
   }
 `;
