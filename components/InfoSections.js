@@ -1,6 +1,6 @@
 import React from "react";
 import { ButtonInfoSection } from "./buttonElement";
-import { NavBtnLink } from "./navbar";
+import { NavBtnLink } from "./styled/navStyles";
 import { logoutBtn } from "@/app/actions/signUp";
 import {
   InfoContainer,
