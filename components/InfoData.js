@@ -68,6 +68,7 @@ export const dashObjOne = {
   img: image5,
   alt: "crescent1",
   to: "second",
+  dashScreen: true,
 };
 
 export const dashObjTwo = {
@@ -83,4 +84,5 @@ export const dashObjTwo = {
   dash: "Logout",
   // TODO: Change this so it connects to a more complete site
   destination: "https://Github.com/Zarivate",
+  dashScreen: true,
 };

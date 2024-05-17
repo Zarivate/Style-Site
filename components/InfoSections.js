@@ -31,13 +31,14 @@ const InfoSections = ({
   alt,
   to,
   dash,
+  dashScreen,
   destination,
   hrefTo,
 }) => {
   return (
     <>
       <InfoContainer id={id}>
-        <InfoWrapper>
+        <InfoWrapper $dashScreen={dashScreen}>
           <InfoRow $imgStart={imgStart}>
             <Column1>
               <TextWrapper>

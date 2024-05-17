@@ -10,3 +10,7 @@ export const TopText = styled.h1`
   margin-top: 5%;
   text-align: center;
 `;
+
+export const DashWrap = styled.div`
+  height: 100vh;
+`;

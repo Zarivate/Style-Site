@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { OutterWrap, Container } from "../signin/signinStyles";
-import { BtnTextWrapper, TopText } from "./dashboardStyles";
+import { BtnTextWrapper, TopText, DashWrap } from "./dashboardStyles";
 import errorBg from "/public/backgroundless/pexelserror.jpg";
 import InfoSections from "@/components/infoSections";
 import { dashObjOne, dashObjTwo } from "@/components/infoData";
@@ -27,10 +27,10 @@ const Dashboard = () => {
   // is signed in or not, a useEffect hook is used to set a session variable
   if (session) {
     return (
-      <>
+      <DashWrap>
         <InfoSections {...dashObjOne} />
         <InfoSections {...dashObjTwo} />
-      </>
+      </DashWrap>
     );
   }
   return (

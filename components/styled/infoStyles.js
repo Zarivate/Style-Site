@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
@@ -14,8 +13,8 @@ export const InfoContainer = styled.div`
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 860px;
-  width: 100%;
+  height: ${({ $dashScreen }) => ($dashScreen ? "100vh" : "860px")};
+  width: ${({ $dashScreen }) => ($dashScreen ? "100vw" : "100%")};
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
