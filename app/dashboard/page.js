@@ -1,9 +1,9 @@
 "use client";
 import Cookies from "js-cookie";
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import Link from "next/link";
-import { OutterWrap, Container } from "../signin/page";
+import { OutterWrap, Container } from "../signin/signinStyles";
+import { BtnTextWrapper, TopText } from "./dashboardStyles";
 import errorBg from "/public/backgroundless/pexelserror.jpg";
 import InfoSections from "@/components/infoSections";
 import { dashObjOne, dashObjTwo } from "@/components/infoData";
@@ -51,14 +51,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
-const BtnTextWrapper = styled.h1`
-  width: 200px;
-  margin: auto;
-`;
-
-const TopText = styled.h1`
-  margin: auto;
-  margin-top: 5%;
-  text-align: center;
-`;

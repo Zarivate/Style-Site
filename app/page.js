@@ -19,7 +19,7 @@ export default function Home() {
     setIsOpen(!isOpen);
   };
   return (
-    <>
+    <div>
       <Sidebar $isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection />
@@ -28,6 +28,6 @@ export default function Home() {
       <InfoSections {...homeObjThree} />
       <InfoSections {...homeObjFour} />
       <Footer />
-    </>
+    </div>
   );
 }

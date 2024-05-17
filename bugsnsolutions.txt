@@ -55,3 +55,27 @@
     To layout.js
     https://stackoverflow.com/questions/39149846/why-am-i-seeing-a-404-not-found-error-failed-to-load-favicon-ico-when-not-usin 
     Happens because even when not using a favicon, browsers look for it in the HTML. 
+
+
+# Error:
+    Skipping auto-scroll behavior due to `position: sticky` or `position: fixed` on element.
+
+    This appeared on both the Navbar and the Sidebar. Appeared any time the user was redirected to the main page, either by pressing the "Demo" text in the top
+    right corner or some other function. At first thought it was due to there not being a scroll option on the redirect Links to the main page but error still
+    appeared. Instead the solution was to either wrap the sections in the components with this position styling in a div or wrap the entire sections in divs. 
+    Chose the later option as before this the App's page.js just had empty <><> wrapping around them.
+    
+# Solution:
+    Needed to add a wrapping div around the components causing this error. App's page.js became this
+    <div>
+      <Sidebar $isOpen={isOpen} toggle={toggle} />
+      <Navbar toggle={toggle} />
+      <HeroSection />
+      <InfoSections {...homeObjOne} />
+      <InfoSections {...homeObjTwo} />
+      <InfoSections {...homeObjThree} />
+      <InfoSections {...homeObjFour} />
+      <Footer />
+    </div>
+
+    https://github.com/shadcn-ui/ui/issues/1355 
