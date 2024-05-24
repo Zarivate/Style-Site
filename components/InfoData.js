@@ -1,9 +1,8 @@
-import image1 from "../public/backgroundless/file2.png";
-import image2 from "../public/backgroundless/file3.png";
-import image3 from "../public/backgroundless/file45.png";
-import image4 from "/public/backgroundless/file6.png";
-import image5 from "/public/backgroundless/file6.png";
-import image6 from "/public/backgroundless/file62.png";
+import image1 from "/public/backgroundless/moon1.png";
+import image2 from "/public/backgroundless/moon2.png";
+import image3 from "/public/backgroundless/moon3.png";
+import image4 from "/public/backgroundless/moon4.png";
+import image6 from "/public/backgroundless/moon5.png";
 
 export const homeObjOne = {
   id: "about",
@@ -65,7 +64,7 @@ export const dashObjOne = {
     "This page is only accessible after successfully signing up. The way it's done is by creating a cookie that's used to see whether the user is currently in a session or not. It's rather unsecure but for the purpose of this site it's fine. The logout button in the next section will log you out by destroying the cookie and redirecting you to the main page.",
   buttonLabel: "Continue",
   imgStart: false,
-  img: image5,
+  img: image4,
   alt: "crescent1",
   to: "second",
   dashScreen: true,
