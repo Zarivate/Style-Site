@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import moongBg from "/public/backgroundless/moonphases.jpg";
+import moongBg from "/public/moonphases.jpg";
 import { createAccount } from "../actions/signUp";
 import {
   OutterWrap,
