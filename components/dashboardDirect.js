@@ -20,7 +20,7 @@ const getToken = () => {
   return token;
 };
 
-const DashboardDirect = ({ params }) => {
+const DashboardDirect = () => {
   const [session, setSession] = useState(false);
 
   useEffect(() => {

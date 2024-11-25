@@ -81,7 +81,6 @@ export const dashObjTwo = {
   img: image6,
   alt: "crescent2",
   dash: "Logout",
-  // TODO: Change this so it connects to a more complete site
   destination: "https://voidboard.vercel.app/",
   dashScreen: true,
 };
