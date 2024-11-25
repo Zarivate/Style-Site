@@ -82,6 +82,6 @@ export const dashObjTwo = {
   alt: "crescent2",
   dash: "Logout",
   // TODO: Change this so it connects to a more complete site
-  destination: "https://Github.com/Zarivate",
+  destination: "https://voidboard.vercel.app/",
   dashScreen: true,
 };
